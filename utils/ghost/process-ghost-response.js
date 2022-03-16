@@ -24,7 +24,8 @@ const processGhostResponse = async (ghostRes, context) => {
         obj.primary_author.image_dimensions.profile_image =
           await getImageDimensions(
             obj.primary_author.profile_image,
-            obj.primary_author.name
+            obj.primary_author.name,
+            true
           );
       }
 
@@ -35,7 +36,8 @@ const processGhostResponse = async (ghostRes, context) => {
         obj.primary_author.image_dimensions.cover_image =
           await getImageDimensions(
             obj.primary_author.cover_image,
-            obj.primary_author.name
+            obj.primary_author.name,
+            true
           );
       }
 
