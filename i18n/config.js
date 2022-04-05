@@ -28,16 +28,7 @@ i18next.use(Backend).init({
     .then(res => {
       if (!res.ok) {
         throw new Error(
-          `
-
-
-          ----------------------------------------------------
-          Error: The CDN is missing the trending YAML file.
-          ----------------------------------------------------
-          Unable to fetch the ${currentLocale_i18n} footer: ${res.statusText}
-
-
-          `
+          `Unable to fetch the ${currentLocale_i18n} footer: ${res.statusText}`
         );
       }
       return res;
